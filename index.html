@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="title">
+                Рассчитайте стоимость ипотеки
+            </h1>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="data">
+                        <div class="data-inner">
+                            <label class="data-label">Стоимость недвижимости</label>
+                            <input type="text" class="data-input" value="100000" id="property">
+                            <div class="range-block">
+                                <span class="data-min">100 000</span>
+                                <input type="range" name="property" id="property-range" class="data-range" min="100000" max="10000000" value="100000">
+                                <span class="data-max">10 000 000</span>
+                            </div>
+                        </div>
+                        <div class="data-inner">
+                            <label class="data-label">Первоначальный взнос</label>
+                            <input type="text" class="data-input" value="100000" id="an-initial-fee">
+                            <div class="range-block">
+                                <span class="data-min">100 000</span>
+                                <input type="range" name="an initial fee" id="an-initial-fee-range" class="data-range" min="100000" max="10000000" value="100000">
+                                <span class="data-max">10 000 000</span>
+                            </div>
+                        </div>
+                        <div class="data-inner">
+                            <label class="data-label">Срок кредита</label>
+                            <input type="text" class="data-input" value="1" id="credit-term">
+                            <div class="range-block">
+                                <span class="data-min">1</span>
+                                <input type="range" name="credit term" id="credit-term-range" class="data-range" min="1" max="20" value="1">
+                                <span class="data-max">20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="percent-block">
+                        <h2 class="subtitle">
+                            Выбрать банк
+                        </h2>
+                        <button type="button" class="bank bank--active" data-bank="alfa">
+                            <div class="bank-name">Альфа-банк</div>
+                            <div class="bank-percent">8,7%</div>
+                        </button>
+                        <button type="button" class="bank" data-bank="sber">
+                            <div class="bank-name">Сбербанк</div>
+                            <div class="bank-percent">8,4%</div>
+                        </button>
+                        <button type="button" class="bank" data-bank="pochta">
+                            <div class="bank-name">Почта-банк</div>
+                            <div class="bank-percent">7,9%</div>
+                        </button>
+                        <button type="button" class="bank" data-bank="tinkoff">
+                            <div class="bank-name">Тинькофф-банк</div>
+                            <div class="bank-percent">9,2%</div>
+                        </button>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="counter-inner">
+                        <div class="counter-name">Сумма кредита</div>
+                        <div class="counter" id="amount-of-credit">0<span>₽</span></div>
+                    </div>
+                    <div class="counter-inner">
+                        <div class="counter-name">Ежемесячный платеж</div>
+                        <div class="counter" id="monthly-payment">0<span>₽</span></div>
+                    </div>
+                    <div class="counter-inner">
+                        <div class="counter-name">Рекомендуемый доход</div>
+                        <div class="counter" id="recommended-income">0<span>₽</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
